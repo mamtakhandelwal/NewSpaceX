@@ -1,0 +1,180 @@
+.container{
+    padding:10px;
+    background-color:#DCDCDC;
+    font-style: normal;
+    font-family: sans-serif;
+
+    .header{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+  .col-3 {width: 15%;}
+  .col-9 {width: 85%;}
+
+  .left-box{
+    width: 200px;
+    height:550px;  
+    padding: 10px;
+    background-color:white;
+    box-sizing:border-box ;
+  }
+
+  .border-bottom{
+      border-bottom: 1px solid black;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+    
+  }
+
+
+  .heading{
+      font-weight: bold;
+  }
+  .flex-row{
+      display: flex;
+      margin-top: 10px;
+     
+      
+      .flex-col{
+          flex-direction: column;
+          margin-left: 25px;
+      }
+
+     
+  }
+
+
+  button {
+    background-color: #4CAF50;
+    color: black;
+    border-radius: 3px;
+    border:1px solid #4CAF50;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+
+  }
+
+  .right-box{
+      display: flex;
+    
+  }
+  .card-tile{
+    width: 300px;
+    height:400px;  
+    padding: 10px;
+    background-color:white;
+    box-sizing:border-box ;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+    flex: 0 1 calc(50% - 32px);
+  }
+ 
+  
+
+  .cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 16px;
+  }
+  
+  .cardList > * {
+    box-sizing: border-box;
+  }
+  .cardList > *:not(:last-child) {
+    margin-right: 32px;
+  }
+
+
+  .carddata{
+    width: 50px;
+    margin-top: 10px;
+  }
+
+  .details{
+    margin-top: 20px;
+   
+    
+    .list{
+        display: flex;
+        margin-top: 20px;
+
+        .left{
+            font-weight: bold;
+        }
+
+        .right{
+            margin-left: 10px;
+        }
+    }
+  }
+
+
+//tab
+
+  @media screen and (min-width: 700px) and (max-width: 1024px) {
+    
+    .col-s-3 {width: 25%;}
+    
+    .col-s-9 {width: 75%;}
+    
+  }
+//mobile
+  @media screen and (min-width: 300px) and (max-width: 600px)  {
+    .col-m-3 {
+    width: 100%;
+    margin-left: 30px;}
+    
+    .col-m-9 {width: 100%;
+      margin-left: 30px;}
+
+    .header{
+      margin-left: 50px;
+    }
+
+    .left-box{
+      width: 325px;
+      height: 550px;
+      padding: 20px;
+      margin: 5px;
+    }
+
+    .flex-row{
+      margin-left: 30px;
+    }
+
+    .cardList{
+      padding-left: 70px;
+    }
+
+    .carddata{
+      width: 60px;
+    }
+
+    .flex-col{
+      padding-left: 15px;
+      margin-left: 0;
+    }
+  }

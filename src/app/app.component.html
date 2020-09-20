@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="header">
+    SpaceX Launch Program
+  </div>
+  <div class="row">
+    <div class="col-3 col-s-3 col-m-3">
+      <div class="left-box">
+        <div class="heading">Filters</div>
+        <div class="border-bottom">Launch Year</div>
+        <div class="cardList">
+          <div class="carddata" *ngFor="let year of launchYear; let i = index">
+            <div class="cardListItem">
+              <button type="button" (click)="showYear(year)">{{year}}</button>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom"> Successful Launch</div>
+        <div class="flex-row">
+          <div class="flex-col">
+            <button type="button" (click)="processLaunch(1)">True</button>
+          </div>
+          <div class="flex-col">
+            <button type="button" (click)="processLaunch(0)">False</button>
+          </div>
+        </div>
+        <div class="border-bottom">Successful Landing</div>
+        <div class="flex-row">
+          <div class="flex-col">
+            <button type="button" (click)="processLand(1)">True</button>
+          </div>
+          <div class="flex-col">
+            <button type="button" (click)="processLand(1)">False</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 col-s-9 col-m-9">
+      <app-space [Space]="mySpace"></app-space>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

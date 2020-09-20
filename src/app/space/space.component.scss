@@ -1,0 +1,92 @@
+
+ .space_card{
+    width: 22%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+ }
+  .image {
+     height: 100%;
+     width: 100%;
+  }
+ .ids{
+    display: flex;
+    flex-direction: column;
+ }
+ .list_ids{
+    display:list-item;
+    margin-left:20px;
+ }
+  
+ .head_left{
+    font-weight: bold;
+ }
+
+ .data{
+    margin:7px;
+ }
+
+ .mission_name{
+    color:  rgb(24, 90, 188);
+    font-weight: bold;
+    margin-bottom: 10px;;
+ }
+
+ .blue{
+   color:  rgb(24, 90, 188);
+ }
+ 
+ .cardList {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   margin-left:100px ;
+ }
+ 
+ .cardList > * {
+   box-sizing: border-box;
+ }
+ .cardList > *:not(:last-child) {
+   margin-right: 25px;
+ }
+ 
+ 
+
+ @media screen and (min-width: 700px) and (max-width: 1024px) {
+  
+   .cardList > *:not(:last-child) {
+     margin-right: 32px;
+   }
+   
+   .cardListItem {
+     flex: 0 1 calc(50% - 32px);
+   }
+   .space_card{
+      width: 35%;
+   }
+
+   .cardList{
+      margin-left: 55px;
+   }
+ }
+
+ @media screen and (min-width: 300px) and (max-width: 600px)  {
+   .cardList {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+    margin-left: 0px;
+     
+   }
+   .cardList > *:not(:last-child) {
+      width: fit-content;
+      margin-right: 0px;
+   }
+
+   .space_card{
+      width: 68%;
+   }
+
+}

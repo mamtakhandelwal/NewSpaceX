@@ -1,0 +1,36 @@
+<div class="cardList">
+    <div *ngFor="let data of Space; let i = index" class="space_card">
+        <div class="cardListItem">
+            <div class="image">
+                <img [src]='data.links.mission_patch_small' height='auto' width='100%'>
+            </div>
+            <div class="mission_name data">
+                {{data.mission_name}} #{{data.flight_number}}
+            </div>
+            <div class="ids data">  
+                <span class="head_left">Mission Ids :</span>
+                <span class="list_ids blue">
+                    {{data.mission_id}}
+                </span>
+            </div>
+            <div class="data">
+                <span class="head_left">Launch Year :</span>
+                <span class="blue">
+                    {{data.launch_year}}
+                </span>
+            </div>
+            <div class="data">
+                <span class="head_left">Successful Launch :</span>
+                <span class="blue">
+                    {{data.launch_success}}
+                </span>
+            </div>
+            <div class="data">
+                <span class="head_left">Successful Landing :</span>
+                <span class="blue">
+                    {{data.rocket.first_stage.cores[land_success]}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
